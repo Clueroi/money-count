@@ -4,30 +4,11 @@ import { Summary } from "../../components/summary/summary";
 import { SearchForm } from "./searchForm";
 import { TransactionsContainer, TransactionsTable, PriceHighlight } from "./styles";
 
-interface transactions {
-  id: number
-  description: string
-  type: 'income' | 'outcome'
-  price: number
-  category: string
-  createdAt: string
-}
+
 
 export function Transactions() {
 
-  const [transactions, setTransactions] = useState<transactions[]>([])
-
-  async function loadTransacionts() {
-    const response = await fetch('http://localhost:3333/transactions')
-    const data = await response.json()
-
-    setTransactions(data)
-  }
-
-
-  useEffect(() => {
-    loadTransacionts()
-  }, [])
+  
 
   return (
     <div>
