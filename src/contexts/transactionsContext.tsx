@@ -30,9 +30,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
         description: query
       }
     })
-
-    console.log(responseDesc.data)
-
     setTransactions(responseDesc.data)
   }
 

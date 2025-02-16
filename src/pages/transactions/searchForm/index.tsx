@@ -22,7 +22,6 @@ export function SearchForm() {
 
   async function handleSearchTransaction(data: SearchFormInputs) {
     await fetchTransactions(data.query)
-    console.log(data)
   }
 
   return (
